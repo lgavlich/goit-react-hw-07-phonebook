@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { v4 as uuidv4 } from "uuid";
 import s from "./ContactList.module.css";
 import { connect } from "react-redux";
-import actions from "../../redux/contacts-actions";
+import contactsOperations from "../../redux/contacts-operations";
 
 function Input({ onFormSubmit }) {
   const [name, setName] = useState("");
@@ -79,7 +79,7 @@ const mapStateToProps = (state) => ({
   contacts: state.contacts.items,
 });
 const mapDispatchToProps = (dispatch) => ({
-  onFormSubmit: (data) => dispatch(actions.addContact(data)),
+  onFormSubmit: (data) => dispatch(contactsOperations.addContact(data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Input);

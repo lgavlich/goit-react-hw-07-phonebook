@@ -1,0 +1,10 @@
+{
+    "contacts":[
+       {
+           "id": "Object ID",
+           "createdAt":"Faker.js",
+           "name": "Faker.js",
+           "phone": "Faker.js"
+       }
+    ]
+}
